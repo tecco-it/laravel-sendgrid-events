@@ -55,7 +55,7 @@ class WebhookController extends Controller
                 '*.timestamp' => 'required|integer',
                 '*.event' => 'required|in:' . implode(',', EventEnum::getAll()),
                 '*.sg_event_id' => 'required|string',
-                '*.sg_message_id' => 'required|string',
+                '*.sg_message_id' => 'nullable|string',
                 '*.category' => function ($attribute, $value, $fail) {
                     if (!is_null($value) && !in_array(gettype($value), ['string', 'array'])) {
                         $fail($attribute.' must be a string or array.');
