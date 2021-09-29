@@ -1,5 +1,5 @@
 {
-    "name": "antiques/laravel-sendgrid-events",
+    "name": "tecco-it/laravel-sendgrid-events",
     "description": "Laravel package for receiving, storing and handling events from Sendgrid webhook",
     "type": "library",
     "license": "MIT",
