@@ -38,7 +38,7 @@ class SendgridEventRepository implements SendgridEventRepositoryInterface
         $newEvent->email = $event['email'];
         $newEvent->event = $event['event'];
         $newEvent->sg_event_id = $event['sg_event_id'];
-        $newEvent->sg_message_id = !empty($event['sg_message_id']) ? $event['sg_message_id'] : '';
+        $newEvent->sg_message_id = $event['sg_message_id'] ?? '';
         $newEvent->payload = $event;
 
         if (!empty($event['category'])) {
